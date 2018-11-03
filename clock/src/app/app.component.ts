@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Howl, Howler} from 'howler';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ export class AppComponent {
   title = 'clock';
 
   started = false;
+  end = false;
   player1Seconds = 1000 * 60 * 5;
   player2Seconds = 1000 * 60 * 5;
 
@@ -21,6 +23,7 @@ export class AppComponent {
 
   turn = 1;
   
+  sound: Howl;
 
   constructor(){
     this.player1Time = this.formatSeconds(this.player1Seconds);
@@ -30,6 +33,7 @@ export class AppComponent {
   ngOnInit(){
     setInterval(() => {
       if(this.started){
+        
         if(this.turn == 1){
           this.player1Seconds-=10;
           this.player1Time = this.formatSeconds(this.player1Seconds);
@@ -37,14 +41,19 @@ export class AppComponent {
           this.player2Seconds-=10;
           this.player2Time = this.formatSeconds(this.player2Seconds);
         }
-      }
 
-      if(this.player1Seconds == 0 || this.player2Seconds == 0){
-        alert(this.turn == 1 ? "Player 1 Lost!" : "Player 2 Lost!");
-        this.started = false;
+        if(this.player1Seconds == 0 || this.player2Seconds == 0){
+          this.end = true;
+          this.started = false;
+          alert(this.turn == 1 ? "Player 1 Lost!" : "Player 2 Lost!");
+        }
       }
-
     }, 10);
+
+    this.sound = new Howl({
+      src: ['touch.wav'],
+      html5 :true
+    });
   }
 
   pad(num:number, size:number): string {
@@ -63,7 +72,11 @@ export class AppComponent {
   }
 
   changeTurn(turn: number): void{
+    if(this.turn == turn)
+      return;
+
     this.turn = turn;
+    this.sound.play();
   }
 
   reset(): void{
@@ -73,5 +86,6 @@ export class AppComponent {
     this.player1Time = this.formatSeconds(this.player1Seconds);
     this.player2Time = this.formatSeconds(this.player2Seconds);
     this.started = false;
+    this.end = false;
   }
 }

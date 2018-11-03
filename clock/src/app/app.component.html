@@ -7,18 +7,18 @@
 
   <button id="start-stop" (click)="startStop()"> Start / Stop </button>
 
-  <div id="player-left" class="player selected" [ngClass]="{'selected': turn === 1 }">
+  <div id="player-left" (click)="changeTurn(2)" class="player selected"
+   [ngClass]="{'selected': turn === 1 && started, 'game-over': turn === 1 && end}">
     <div>
-      <span>{{player1Time}}</span><br>
-      <button (click)="changeTurn(2)"> Pause </button>  
+      <span>{{player1Time}}</span><br> 
     </div>
 
   </div>
   
-  <div id="player-right" class="player" [ngClass]="{'selected': turn === 2 }">
+  <div id="player-right" (click)="changeTurn(1)" class="player" 
+  [ngClass]="{'selected': turn === 2 && started, 'game-over': turn === 2 && end}">
       <div>
         <span>{{player2Time}}</span><br>
-        <button (click)="changeTurn(1)"> Pause </button>
       </div>
   </div>
 </div>
