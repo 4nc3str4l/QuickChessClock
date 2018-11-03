@@ -72,7 +72,7 @@ export class AppComponent {
   }
 
   changeTurn(turn: number): void{
-    if(this.turn == turn)
+    if(this.turn == turn || !this.started)
       return;
 
     this.turn = turn;

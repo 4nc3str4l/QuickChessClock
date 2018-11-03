@@ -5,7 +5,7 @@
       <button (click)="reset()"> Reset </button>
   </div>
 
-  <button id="start-stop" (click)="startStop()"> Start / Stop </button>
+  <button id="start-stop" (click)="startStop()" [ngClass]="{'start': !started, 'stop': started }"> Start / Stop </button>
 
   <div id="player-left" (click)="changeTurn(2)" class="player selected"
    [ngClass]="{'selected': turn === 1 && started, 'game-over': turn === 1 && end}">

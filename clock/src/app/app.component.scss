@@ -38,12 +38,19 @@
     background: rgba(255, 0, 0, 0.2);
 }
 
+.start{
+    background: rgba(0, 150, 0, 1);
+}
+
+.stop{
+    background: rgba(150, 0, 0, 1);
+}
+
 #start-stop{
     position: absolute;
     width: 30%;
     height: 50px;
     color: white;
-    background-color: green;
     border: none;
     bottom: 20px;
     left: calc(50% - 15%);
