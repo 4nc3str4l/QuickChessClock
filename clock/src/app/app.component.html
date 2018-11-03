@@ -5,15 +5,20 @@
       <button (click)="reset()"> Reset </button>
   </div>
 
-  <button id="start-stop" (click)="startStop()"> Stop </button>
+  <button id="start-stop" (click)="startStop()"> Start / Stop </button>
 
-  <div id="player-left" class="player">
-    <span>{{player1Time}}</span><br>
-    <button (click)="changeTurn(2)"> Pause </button>  
+  <div id="player-left" class="player selected" [ngClass]="{'selected': turn === 1 }">
+    <div>
+      <span>{{player1Time}}</span><br>
+      <button (click)="changeTurn(2)"> Pause </button>  
+    </div>
+
   </div>
   
-  <div id="player-right" class="player">
-    <span>{{player2Time}}</span><br>
-    <button (click)="changeTurn(1)"> Pause </button>
+  <div id="player-right" class="player" [ngClass]="{'selected': turn === 2 }">
+      <div>
+        <span>{{player2Time}}</span><br>
+        <button (click)="changeTurn(1)"> Pause </button>
+      </div>
   </div>
 </div>
