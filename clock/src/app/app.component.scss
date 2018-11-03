@@ -1,0 +1,50 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player{
+    width: 50%;
+    text-align: center;
+
+    span{
+        font-size: 3em;
+    }
+
+    button{
+        margin-top: 50px;
+        width: 60%;
+        height: 50px;
+        background: green;
+    }
+}
+
+#start-stop{
+    position: absolute;
+    width: 30%;
+    height: 50px;
+    color: white;
+    background-color: red;
+    border: none;
+    bottom: 20px;
+    left: calc(50% - 15%);
+}
+
+.reset{
+    text-align: center; 
+    position: absolute;
+    top: 20px;
+    width: 100%;
+
+    button, input {
+        width: 15%;
+        text-align: center; 
+    }
+
+    button{
+        margin-top: 20px;
+        color: white; 
+        background: green;
+    }
+}
