@@ -21,3 +21,4 @@ Me: Wait, wait almostttttt [Fast typing and violating all the good coding practi
 
 That's it, don't jutge me. BTW I won 3 of 4 games YEEAHHH!
 
+![Clock image](https://github.com/4nc3str4l/QuickChessClock/blob/master/clock/clock.png)
