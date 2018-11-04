@@ -22,3 +22,11 @@ Me: Wait, wait almostttttt [Fast typing and violating all the good coding practi
 That's it, don't jutge me. BTW I won 3 of 4 games YEEAHHH!
 
 ![Clock image](https://github.com/4nc3str4l/QuickChessClock/blob/master/clock/clock.png)
+
+Instructions:
+
+- Tap on start/stop to start the countdown for player 1.
+- Tap anywhere on your region (Green zone) to stop your timer and start your oponent's one.
+- Concentrate on the game, don't run out of time and take care of your king.
+
+Good luck!
