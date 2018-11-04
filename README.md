@@ -16,7 +16,8 @@ Me: I'm coding a Chess Clock really quickly!!!
 
 Friend: It's not necessary, look there is this app...
 
-Me: Wait, wait almostttttt [Fast typing and violating all the good coding practices] ahh yeah! that's it go to this url: https://4nc3str4l.github.io/QuickChessClock/
+Me: Wait, wait almostttttt [Fast typing and violating all the good coding practices] ahh yeah! that's it go to this url: https://4nc3str4l.github.io/QuickChessClock/ (Is not my best work at all, but it works)
 
 
 That's it, don't jutge me. BTW I won 3 of 4 games YEEAHHH!
+
